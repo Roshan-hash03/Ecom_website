@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LexOutfits — Premium Outfits</title>
+  <meta name="description" content="Curated premium tech accessories. Handpicked products, honest reviews, best prices on Amazon."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>   <!-- in the <head> -->
+
+</head>
+<body>
+  
+
+  <!-- ═══════════════════════════════════════
+       STICKY GLASSMORPHISM NAVBAR
+  ═══════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <a href="#" class="nav-logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">Lex<strong>Outfits</strong></span>
+      </a>
+
+      <!-- Category Filters -->
+      <ul class="nav-filters" id="navFilters">
+        <li><button class="filter-btn active" data-filter="all">All Products</button></li>
+        <li><button class="filter-btn" data-filter="bestseller">Best Sellers</button></li>
+        <li><button class="filter-btn" data-filter="new">New Arrivals</button></li>
+      </ul>
+
+      <!-- Mobile hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile filter drawer -->
+  <div class="mobile-filters" id="mobileFilters">
+    <button class="filter-btn active" data-filter="all">All Products</button>
+    <button class="filter-btn" data-filter="bestseller">Best Sellers</button>
+    <button class="filter-btn" data-filter="new">New Arrivals</button>
+    <button class="filter-btn" data-filter="audio">Audio</button>
+    <button class="filter-btn" data-filter="charging">Charging</button>
+    <button class="filter-btn" data-filter="workspace">Workspace</button>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Curated for the discerning</p>
+      <h1 class="hero-title">Premium Outfits,<br/><em>Honest Prices.</em></h1>
+      <p class="hero-sub">Your dream wardrobe, curated by experts and fulfilled by Amazon. No middlemen just pure, effortless style delivered to your door</p>
+      <div class="hero-stats">
+        <div class="stat"><strong>120+</strong><span>Outfits</span></div>
+        <div class="stat"><strong>4.8★</strong><span>Avg Rating</span></div>
+        <div class="stat"><strong>Free</strong><span>Returns via Amazon</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">↓ Browse Collection</div>
+  </header>
+
+  <!-- ═══════════════════════════════════════
+       RESULTS BAR
+  ═══════════════════════════════════════ -->
+  <div class="results-bar">
+    <div class="results-container">
+      <p class="results-count" id="resultsCount">Showing <strong>12</strong> products</p>
+      <div class="sort-wrap">
+        <label for="sortSelect">Sort by</label>
+        <select id="sortSelect" class="sort-select">
+          <option value="default">Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="rating">Top Rated</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       PRODUCT GRID
+  ═══════════════════════════════════════ -->
+  <main class="catalog" id="catalog">
+    <div class="product-grid" id="productGrid">
+      <!-- Products injected by JavaScript -->
+    </div>
+
+    <!-- Empty state -->
+    <div class="empty-state" id="emptyState" style="display:none;">
+      <div class="empty-icon">🔍</div>
+      <h3>No products found</h3>
+      <p>Try a different category filter.</p>
+    </div>
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       QUICK VIEW MODAL
+  ═══════════════════════════════════════ -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+    <div class="modal" id="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-inner" id="modalInner">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       FIXED FOOTER — Amazon Compliance
+  ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">Tech<strong>Vault</strong></span>
+      </div>
+      <nav class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Disclosure</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+    <div class="affiliate-disclaimer">
+      <p>
+        <strong>Affiliate Disclosure:</strong> As an Amazon Associate, I earn from qualifying purchases.
+        Product prices and availability are accurate as of the date/time indicated and are subject to change.
+        Any price and availability information displayed on Amazon at the time of purchase will apply.
+      </p>
+    </div>
+  </footer>
+  <script src="app.js"></script>               <!-- before </body> -->
+</body>
+</html>
